@@ -317,3 +317,5 @@ macOS / Linux は各OS向けのインストーラを選択してください。
 - VSCode + Marpプラグイン で手軽に始められる
 - 授業で使える機能は一通り揃っている
 - 段組など苦手な部分は割り切って使う
+
+このスライドを生成したコード: https://github.com/takatani-h/marp-intro
