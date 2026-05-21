@@ -28,9 +28,10 @@ Markdownで作るシンプルなプレゼンテーション
 2. PowerPoint / Keynoteとの比較
 3. 使いやすさと弱点
 4. 標準テーマ
-5. 授業で使える機能
-6. 導入方法
-7. VSCode Marpプラグインの使い方
+5. フォント設定 (PDF対策)
+6. 授業で使える機能
+7. 導入方法
+8. VSCode Marpプラグインの使い方
 
 ---
 
@@ -89,6 +90,26 @@ Marpには3つのテーマが標準で付属しています。
 フロントマターの1行を変えるだけで切り替えられます:`theme: gaia`
 
 このスライドは `default` を使っています。
+
+---
+
+# フォント設定 (PDF対策)
+
+設定なしでPDFを生成すると **中国語フォント** が混入することがある。
+
+**原因**: ChromiumがCJK文字 (日本語・中国語・韓国語) を同じUnicode範囲とみなし、環境によって中国語フォントを優先するため。
+
+**対策**: フロントマターの `style` でフォントを明示する。
+
+```yaml
+style: |
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+  section {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+```
+
+このスライドでも上記の設定を適用済み。
 
 ---
 
